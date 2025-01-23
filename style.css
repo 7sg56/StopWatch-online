@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Roboto+Slab:wght@100;900&family=Space+Grotesk:wght@300;700&display=swap');
+
+body {
+    font-family: 'Jersey 15', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #282a36, #44475a);
+    overflow: hidden;
+    color: #f8f8f2;
+}
+
+.background-watermarks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.watermark {
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.05); /* Transparent white for watermark */
+    mix-blend-mode: overlay;
+    user-select: none;
+    pointer-events: none;
+    margin: 1rem;
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1f29, #2a2b3d);
+    border: 4px solid #bd93f9;
+    width: 32rem;
+    padding: 40px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5), 0 -5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    text-align: center;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #bd93f9;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.timer span {
+    font-size: 7.5rem;
+    font-weight: bold;
+    color: #50fa7b;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 0;
+    gap: 20px;
+}
+
+.buttons button {
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 14px 40px;
+    border: 2px solid #bd93f9;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #44475a;
+    color: #f8f8f2;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons button:hover {
+    background: #bd93f9;
+    color: #282a36;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 10px rgba(189, 147, 249, 0.5);
+}
+
+.buttons button:active {
+    transform: translateY(1px) scale(0.97);
+    background: #6272a4;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid #6272a4;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .timer span {
+        font-size: 5rem;
+    }
+
+    .buttons button {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+    }
+}
